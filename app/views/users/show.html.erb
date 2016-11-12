@@ -1,0 +1,16 @@
+<h4>User: <%= @user.first_name.capitalize %> <%= @user.last_name.to_s.capitalize %></h4>
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role.name %>
+</p>
+<%= link_to 'Back', users_path, class: 'btn btn-primary btn-mini' %>

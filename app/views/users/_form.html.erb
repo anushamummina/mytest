@@ -1,0 +1,8 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :role_id, as: :select, collection: @roles.map{|x| [x.name, x.id]}, prompt: "Select your Role" %>
+  <%= f.button :submit, class:'btn btn-info' %>
+  <%= link_to 'Back', users_path, class: 'btn btn-default' %>
+<% end %>
